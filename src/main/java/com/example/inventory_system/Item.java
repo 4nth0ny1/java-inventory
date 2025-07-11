@@ -1,3 +1,5 @@
+package com.example.inventory_system;
+
 import jakarta.persistence.*;
 
 @Entity

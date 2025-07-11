@@ -1,3 +1,5 @@
+package com.example.inventory_system;
+
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
