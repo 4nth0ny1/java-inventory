@@ -1,6 +1,8 @@
 package com.example.inventory_system;
 
 import org.springframework.web.bind.annotation.*;
+import org.springframework.http.ResponseEntity;
+import java.util.Optional;
 import java.util.List;
 
 @RestController
@@ -16,4 +18,12 @@ public class ItemController {
 	public List<Item> getItems() {
 		return service.getAllItems();
 	}
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Item> getItemById(@PathVariable Long id) {
+        Optional<Item> item = service.getOneItem(id);
+        return item.map(ResponseEntity::ok)
+                   .orElseGet(() -> ResponseEntity.notFound().build());
+    }
+	
 }
