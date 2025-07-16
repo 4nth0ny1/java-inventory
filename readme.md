@@ -4,9 +4,8 @@
 	x -	import to dbeaver
 ### java backend REST api
 	x - connected spring boot with postgres db
-	create CRUD routes
-	confirm routes with postman
+	x - create CRUD routes
+	x - confirm routes with postman
 
-## 2nd phase 
-### nextjs frontend 
+
 
