@@ -6,6 +6,6 @@
 	x - connected spring boot with postgres db
 	x - create CRUD routes
 	x - confirm routes with postman
-
-
-
+### added thymeleaf frontend
+	x - simple table with get request
+###	add testing 
