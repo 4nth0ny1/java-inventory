@@ -8,16 +8,16 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/items")
 public class ItemController {
-	private final ItemService service;
+    private final ItemService service;
 
-	public ItemController(ItemService service) {
-		this.service = service;
-	}
+    public ItemController(ItemService service) {
+        this.service = service;
+    }
 
-	@GetMapping
-	public List<Item> getItems() {
-		return service.getAllItems();
-	}
+    @GetMapping
+    public List<Item> getItems() {
+        return service.getAllItems();
+    }
 
     @GetMapping("/{id}")
     public ResponseEntity<Item> getItemById(@PathVariable Long id) {
@@ -25,5 +25,4 @@ public class ItemController {
         return item.map(ResponseEntity::ok)
                    .orElseGet(() -> ResponseEntity.notFound().build());
     }
-	
 }
